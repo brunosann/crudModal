@@ -2,15 +2,10 @@
 include('conexao.php');
 
 if(isset($_GET['id']) && !empty($_GET['id'])) {
-
-} else {
-  header('Location: index.php');
-}
-$nome = addslashes($_POST['nome']);
-$sobrenome = addslashes($_POST['sobrenome']);
-$idade = addslashes($_POST['idade']);
-
-if (!empty($nome) && !empty($sobrenome) && !empty($idade)) {
+  $id = $_GET['id'];
+  $nome = addslashes($_POST['nome']);
+  $sobrenome = addslashes($_POST['sobrenome']);
+  $idade = addslashes($_POST['idade']);
 
   $sql = $pdo->prepare("UPDATE usuarios SET nome=:nome, sobrenome=:sobrenome, idade=:idade WHERE id=:id");
   $sql->bindValue(':nome', $nome);
@@ -23,4 +18,3 @@ if (!empty($nome) && !empty($sobrenome) && !empty($idade)) {
   header('Location: index.php');
   die;
 }
-?>

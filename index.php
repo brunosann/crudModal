@@ -31,24 +31,27 @@
     </form>
 
     <ul class="lista">
-      <?php 
-        include('lista.php');
-        lista();
+      <?php
+      include('lista.php');
+      lista();
       ?>
     </ul>
   </div>
 
   <div class="modalExcluir">
-    <div class="close"></div>
+    <div class="close">✖</div>
     <span>Tem certeza que deseja excluir?</span>
-    <button class="confirma"><a href="">sim</a></button>
-    <button class="negar">nao</button>
+    <div class="botoes">
+      <button class="confirma"><a href="">Sim</a></button>
+      <button class="negar"><a href="#">Não</a></button>
+    </div>
   </div>
-  
+
   <div class="modalEditar">
+    <div class="close">✖</div>
     <h2>Editar dados</h2>
     <form action="" method="post" class="formEditar">
-    <div class="quadradoInput">
+      <div class="quadradoInput">
         <label for="nome">Nome: </label>
         <input type="text" name="nome" id="nome">
       </div>
