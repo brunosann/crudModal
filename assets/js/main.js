@@ -6,7 +6,7 @@ const confirmado = document.querySelector('.confirma a');
 function excluir(event) {
   event.preventDefault();
   const id = event.target.getAttribute('href');
-  confirmado.setAttribute('href', 'delete.php?id='+id);
+  confirmado.setAttribute('href', 'assets/pages/delete.php?id='+id);
   modalExcluir.style.display = 'block';
 }
 
@@ -26,7 +26,7 @@ const campoIdade = confirmaEdicao.querySelector('#idade');
 function editar(event) {
   event.preventDefault();
   const id = event.target.getAttribute('href');
-  confirmaEdicao.setAttribute('action', `editar.php?id=${id}`);
+  confirmaEdicao.setAttribute('action', `assets/pages/editar.php?id=${id}`);
 
   //pegando os texto ja preenchidos da lista para ponhar no formulario de EDITAR
   //event.target = pega o botao editar, parentElement = pega o elemento pai (li), children pega os filhos do li

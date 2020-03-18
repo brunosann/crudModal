@@ -6,9 +6,9 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
   $sql->bindValue(':id', $id);
   $sql->execute();
 
-  header('Location: index.php');
+  header('Location: ../../index.php');
 } else {
-  header('Location: index.php');
+  header('Location: ../../index.php');
   die;
 }
 

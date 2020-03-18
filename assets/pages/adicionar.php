@@ -12,9 +12,9 @@ if (!empty($nome) && !empty($sobrenome) && !empty($idade)) {
   $sql->bindValue(':sobrenome', $sobrenome);
   $sql->bindValue(':idade', $idade);
   $sql->execute();
-  header('Location: index.php');
+  header('Location: ../../index.php');
 } else {
-  header('Location: index.php');
+  header('Location: ../../index.php');
   die;
 }
 ?>

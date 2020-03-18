@@ -11,7 +11,7 @@
 <body>
   <div class="container">
     <h1>Crud com Modal</h1>
-    <form action="adicionar.php" method="post" id="formulario">
+    <form action="assets/pages/adicionar.php" method="post" id="formulario">
       <div class="quadradoInput">
         <label for="nome">Nome: </label>
         <input type="text" name="nome" id="nome">
@@ -32,7 +32,7 @@
 
     <ul class="lista">
       <?php
-      include('lista.php');
+      include('assets/pages/lista.php');
       lista();
       ?>
     </ul>
